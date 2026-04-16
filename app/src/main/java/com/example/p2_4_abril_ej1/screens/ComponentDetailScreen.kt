@@ -14,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.p2_4_abril_ej1.data.componentList
 
+// IA generated: Detailed screen showing Material 3 components based on ID
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ComponentDetailScreen(
@@ -21,14 +22,17 @@ fun ComponentDetailScreen(
     componentId: String
 ) {
 
+    // IA generated: Finding the component in the list by its ID
     val component = componentList.find { it.id == componentId }
 
+    // IA generated: States for showing dialogs and bottom sheets
     var showDialog by remember { mutableStateOf(false) }
     var showSheet by remember { mutableStateOf(false) }
 
     Scaffold(
 
         topBar = {
+            // IA generated: TopAppBar with a back button
             TopAppBar(
                 title = {
                     Text(component?.name ?: "Detalle")
@@ -64,6 +68,7 @@ fun ComponentDetailScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
+            // IA generated: Conditional logic to display different M3 component examples
             when (componentId) {
 
                 "appbars" -> {

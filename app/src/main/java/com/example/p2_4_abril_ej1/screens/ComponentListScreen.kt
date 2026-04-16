@@ -9,22 +9,13 @@ import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material3.Badge
-import androidx.compose.material3.BadgedBox
-import androidx.compose.material3.Divider
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.ListItem
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import com.example.p2_4_abril_ej1.data.componentList
 
+// IA generated: Screen that displays a list of Material 3 components
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ComponentListScreen(navController: NavController) {
@@ -32,7 +23,7 @@ fun ComponentListScreen(navController: NavController) {
     Scaffold(
 
         topBar = {
-
+            // IA generated: Top bar with title and a notification badge
             TopAppBar(
                 title = {
                     Text("Componentes M3")
@@ -55,6 +46,7 @@ fun ComponentListScreen(navController: NavController) {
         },
 
         bottomBar = {
+            // IA generated: Bottom navigation bar with basic items
             NavigationBar {
 
                 NavigationBarItem(
@@ -94,6 +86,7 @@ fun ComponentListScreen(navController: NavController) {
 
     ) { padding ->
 
+        // IA generated: List using LazyColumn to show items from data source
         LazyColumn(contentPadding = padding) {
 
             items(componentList) { item ->
@@ -117,11 +110,12 @@ fun ComponentListScreen(navController: NavController) {
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
+                            // IA generated: Navigate to detail screen passing the item ID
                             navController.navigate("detail/${item.id}")
                         }
                 )
 
-                Divider()
+                HorizontalDivider()
             }
         }
     }

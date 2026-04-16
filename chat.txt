@@ -1,0 +1,13 @@
+[2025-05-14 12:00:00]
+Description: Request to read and apply project guidelines.
+Prompt: lee y aplica las instrucciones del archivo guidelines
+
+[2025-05-14 12:05:00]
+Description: Applying guidelines: adding mandatory AI annotations and organizing project structure.
+Prompt: Applying the following changes based on guidelines:
+1. Adding "// IA generated:" comments to all existing source files.
+2. Renaming misspelled "navegation" package to "navigation".
+3. Aligning package names with requested "models" (plural).
+4. Moving MainActivity to "activities" package.
+5. Updating all imports to reflect package changes.
+6. Adding annotations to theme files.
